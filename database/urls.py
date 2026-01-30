@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('database/register', views.database_register, name='database_register'),
+    path('database/login', views.database_login, name='database_login')
 ]

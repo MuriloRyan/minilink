@@ -6,11 +6,9 @@ class User(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    password = models.CharField(max_length=430)
+    password = models.BinaryField(max_length=128)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
-    salt = models.BinaryField(max_length=128, default=bytes(0))
 
     links = models.IntegerField(default=0)
 

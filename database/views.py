@@ -4,7 +4,6 @@ import bcrypt
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from database.utils.HashUtils import HashUtils
 from database.utils.JwtAuth import JwtAuth
 
 from . import models
